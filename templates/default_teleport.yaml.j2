@@ -17,6 +17,10 @@ teleport:
   diag_addr: ""
 ssh_service:
   enabled: "yes"
+  enhanced_recording:
+    enabled: {{ teleport_ssh_enhanced_recording | ternary('yes', 'no') }}
+  restricted_session:
+    enabled: {{ teleport_ssh_restricted_session | bool }}
   labels:
 {% for ssh_label in teleport_ssh_labels %}
     {{ ssh_label.k }}: {{ ssh_label.v }}

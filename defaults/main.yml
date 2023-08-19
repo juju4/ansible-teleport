@@ -17,4 +17,9 @@ teleport_template_config: yes
 # Default dont change
 update_teleport: no
 
+# https://goteleport.com/blog/enhanced-session-recording/
+teleport_ssh_enhanced_recording: true
+# https://goteleport.com/docs/server-access/guides/restricted-session/
+teleport_ssh_restricted_session: false
+
 is_container: false
